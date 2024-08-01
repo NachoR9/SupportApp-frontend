@@ -4,9 +4,7 @@ import RequestEdit from '@/components/RequestEdit.vue';
 </script>
 
 <template>
-  <div>
-    <RequestEdit />
-  </div>
+  <RequestEdit />
 </template>
 
 <style>

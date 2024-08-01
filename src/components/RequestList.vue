@@ -8,9 +8,23 @@ requestsStore.get();
 </script>
 
 <template>
-  
-  <RouterLink :to="`/requestedit/${ request.id }`" v-for="request in requestsStore.requests">{{ request }}</RouterLink>
-
+  <div class="list-group">
+    <RouterLink
+      :to="`/requestedit/${request.id}`"
+      v-for="request in requestsStore.requests"
+      class="list-group-item list-group-item-action d-flex flex-column flex-md-row justify-content-between"
+    >
+      <div>
+        <div class="d-flex flex-column">
+          <div>
+            <strong>{{ request.topic }} - {{ request.name }}</strong>
+          </div>
+          <div>{{ request.description }}</div>
+        </div>
+      </div>
+      <div>{{ request.date }}</div>
+    </RouterLink>
+  </div>
 </template>
 
 <style scoped></style>

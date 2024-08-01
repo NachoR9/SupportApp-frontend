@@ -24,48 +24,54 @@ async function submit(e) {
 </script>
 
 <template>
-  <div>
-    <form @submit="submit">
-      <ul>
-        <li>
-          <label for="name">Name</label>
-          <input v-model="name" type="text" id="name" name="name" required />
-        </li>
-        <li>
-          <label for="name">Date</label>
-          <input
-            v-model="date"
-            type="datetime-local"
-            id="date"
-            name="date"
-            required
-          />
-        </li>
-        <li>
-          <label for="name">Topic</label>
-          <input v-model="topic" type="text" id="topic" name="topic" required />
-        </li>
-        <li>
-          <label for="name">Description</label>
-          <input
-            v-model="description"
-            type="text"
-            id="description"
-            name="description"
-            required
-          />
-        </li>
-      </ul>
-      <button type="submit">Submit</button>
+  <form @submit="submit">
+    <div class="row mb-3">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input v-model="name" type="text" id="name" name="name" required class="form-control py-2" />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="date"  class="col-sm-2 col-form-label">Date</label>
+      <div class="col-sm-10">
+        <input
+          v-model="date"
+          type="datetime-local"
+          id="date"
+          name="date"
+          required
+          class="form-control py-2"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="topic"  class="col-sm-2 col-form-label">Topic</label>
+      <div class="col-sm-10">
+        <input v-model="topic" type="text" id="topic" name="topic" required class="form-control py-2"/>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="description"  class="col-sm-2 col-form-label">Description</label>
+      <div class="col-sm-10">
+        <input
+          v-model="description"
+          type="text"
+          id="description"
+          name="description"
+          required
+          class="form-control py-2"
+        />
+      </div>
+    </div>
+    <div class="d-flex justify-content-end">
       <input
         type="reset"
         value="Reset"
+        class="btn btn-secondary me-2"
       />
-      <button>
-        
-      </button>
-    </form>
-  </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
 </template>
 
 <style scoped></style>

@@ -4,9 +4,7 @@ import RequestList from '@/components/RequestList.vue';
 </script>
 
 <template>
-  <div>
-    <RequestList />
-  </div>
+  <RequestList />
 </template>
 
 <style>
